@@ -1,0 +1,6 @@
+{
+  "name": "Modular Ellipse Grid System",
+  "description": "A browser-based SVG tool for constructing modular ellipse-based grid systems with exact region detection and fill capability using planar graph traversal.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}
