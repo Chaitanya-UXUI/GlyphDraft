@@ -1189,18 +1189,28 @@ export default function App() {
               {showDeleteConfirm ? (
                 <div className="flex items-center gap-1 bg-red-50 p-0.5 rounded border border-red-200">
                   <button 
-                    onClick={() => deleteFolder(activeFolderId)}
+                    type="button"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      e.stopPropagation();
+                      deleteFolder(activeFolderId);
+                    }}
                     className="px-2 py-0.5 text-[9px] font-bold text-red-600 hover:bg-red-100 rounded transition-colors"
                   >
                     Confirm
                   </button>
                   <button 
-                    onClick={() => setShowDeleteConfirm(false)}
+                    type="button"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      e.stopPropagation();
+                      setShowDeleteConfirm(false);
+                    }}
                     className="px-2 py-0.5 text-[9px] font-bold text-gray-500 hover:bg-gray-100 rounded transition-colors"
                   >
                     Cancel
                   </button>
-                </div>
+                </div>>
               ) : (
                 <button 
                   onClick={() => setShowDeleteConfirm(true)}
